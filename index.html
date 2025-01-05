@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>GOMORSE</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="assets/logo.png" type="image/x-icon">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <header>
+            <div class="appName">
+                <h1>GO<span class="judulApp">MORSE</span></h1>
+            </div>
+            <nav>
+                <div class="box">
+                    <a href="#go-service">GO-SERVICE</a>
+                </div>
+                
+                <div class="box">
+                    <a href="#go-info">GO-INFO</a>
+                </div>
+            </nav>
+        </header>
+
+        <div class="judul1">
+            <h5 id="go-service">GO-SERVICE</h5>
+        </div>
+
+        <div class="serviceOrder">
+            <div class="subJudul">Input User Location and Vehicle Needed</div>
+            <div class="inputanUser">
+                <form id="orderForm">
+                    <input type="number" name="longitude" id="longitude" placeholder="Longitude" step="0.000001" required>
+                    <input type="number" name="latitude" id="latitude" placeholder="Latitude" step="0.000001" required><br><br>
+                    
+                    <label for="vehicleType" id="question-title">Vehicle To Provide Service Needed :</label>
+                    <select id="vehicleType" name="vehicleType" required>
+                      <option value="">Choose Vehicle</option>
+                      <option value="motor">Motorcycle</option>
+                      <option value="truk">Truck</option>
+                    </select><br><br>
+                    <button type="submit">Submit Data</button>
+                </form>
+            </div>
+            <br>
+            <br>
+            <div class="subJudul">Calculate Service Fee</div>
+            <div class="formulir" id="question-title">
+                <form id="serviceFeeForm">
+                    <label for="services">Choose Services :</label><br>
+
+                    <input type="checkbox" id="perbaikan_umum_ringan" name="services" value="perbaikan_umum_ringan">
+                    <label for="perbaikan_umum_ringan">Perbaikan Umum Ringan - Rp 75,000</label><br>
+            
+                    <input type="checkbox" id="perbaikan_umum_sedang" name="services" value="perbaikan_umum_sedang">
+                    <label for="perbaikan_umum_sedang">Perbaikan Umum Sedang - Rp 150,000</label><br>
+            
+                    <input type="checkbox" id="perbaikan_umum_berat" name="services" value="perbaikan_umum_berat">
+                    <label for="perbaikan_umum_berat">Perbaikan Umum Berat - Rp 300,000</label><br>
+            
+                    <input type="checkbox" id="ganti_aki" name="services" value="ganti_aki">
+                    <label for="ganti_aki">Ganti Aki - Rp 50,000</label><br>
+            
+                    <input type="checkbox" id="ganti_oli" name="services" value="ganti_oli">
+                    <label for="ganti_oli">Ganti Oli - Rp 30,000</label><br>
+            
+                    <input type="checkbox" id="tambal_ban" name="services" value="tambal_ban">
+                    <label for="tambal_ban">Tambal Ban - Rp 20,000</label><br><br>
+            
+                    <label for="biaya_tambahan">Additional Cost (biaya tambahan):</label>
+                    <input type="number" id="biaya_tambahan" name="biaya_tambahan" placeholder="e.g. 10000"><br>
+            
+                    <button type="submit">Calculate Fee</button><br><br>
+                </form>
+            </div>
+
+            <div class="output">
+                <div class="kotak-serviceOrder">
+                    <div class="subJudul">Output For "Input User Location and Vehicle Needed"</div>
+                    <div class="listOutput" id="listOutput">
+                        <!-- Output #1 will be displayed here-->
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="output">
+                <div class="kotak-serviceOrder">
+                    <div class="subJudul">Output For "Calculate Service Fee"</div>
+                    <div class="listOutput" id="result">
+                        <!-- Output #2 will be displayed here-->
+                         
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="emptySpace">
+        </div>
+
+        <div class="judul1">
+            <h5 id="go-info">GO-INFO</h5>
+        </div>
+
+        <div id="output">
+            <!-- Output #3 will be displayed here -->
+
+        </div>
+
+        <div class="emptySpace">
+        </div>
+
+        <footer>
+            <p class="footer_text">&copy; Anthony Bryant Gouw ( 18222033 ) | 2024</p>
+        </footer>
+        <script src="script.js" type="text/javascript"></script>
+    </body>
+</html>

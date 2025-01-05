@@ -1,0 +1,219 @@
+/* colours */
+:root{
+    --primary: #2D3250;
+    --secondary: #D9D9D9;
+    --third: #212434;
+    --fourth: #7077A1;
+    --text: white;
+    --add-text: #FF920C;
+    --add-text2: #FF920C;
+}
+
+body{
+    font-family: 'Inter', sans-serif;
+    background-color: var(--third);
+    margin: 0;
+}
+
+.contentalign{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.apptitel{
+    padding: 15px;
+}
+
+header{
+    display: flex;
+    background-color: var(--primary);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+nav{
+    margin: 0px 0px 0px 650px;
+    position: sticky;
+    display: flex;
+}
+
+.appName{
+    padding: 15px 15px 15px 30px;
+}
+
+h1{
+    color: var(--fourth);
+}
+
+.judulApp{
+    color: var(--add-text);
+    font-style: italic;
+}
+
+.judulkontainer{
+    color: var(--fourth);
+    font-weight: bold;
+    font-size: 25px;
+    margin: 0px 0px 10px 0px;
+    text-align: center;
+}
+
+a{
+    color: var(--add-text);
+    text-decoration: none;
+    transition: color 0.3s;
+    width: 100px;
+}
+
+.box{
+    padding: 30px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    background-color: var(--primary);
+    font-weight: bold;
+}
+
+.box:hover{
+    background-color: var(--add-text);
+    color: var(--primary);
+    font-weight: bold;
+}
+
+.box:hover a{
+    color: var(--primary);
+}
+
+.judul1{
+    background-color: var(--add-text);
+    color: var(--third);
+    font-size: 18px;
+    text-align: center;
+    border-radius: 8px;
+    margin: 25px 0px 0px 50px;
+    padding: 15px 5px;
+    width: 150px;
+}
+
+h5{
+    margin: 0px 10px;
+}
+
+.subJudul{
+    color: var(--fourth);
+    font-size: 16px;
+    font-weight: bold;
+    padding: 15px 0px 5px 50px;
+}
+
+button{
+    background-color: var(--fourth);
+    color: var(--primary);
+    font-weight: bold;
+    font-size: 15px;
+    border: 0px;
+    border-radius: 2px;
+    margin: 10px 0px 0px 0px;
+    padding: 10px;
+}
+
+#question-title{
+    color: white;
+    font-size: 15px;
+    font-weight: medium;
+}
+
+#question-title label {
+    color: white;
+}
+
+#question-title input {
+    color: var(--third);
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.formulir{
+    margin: 0px 0px 0px 50px;
+}
+
+.inputanLogin input[type="text"],
+.inputanLogin input[type="password"] {
+    width: 300px;
+    padding: 10px;
+    margin: 6px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.inputanLogin button{
+    width: 300px;
+    border-radius: 8px;
+}
+
+.inputanUser {
+    margin: 0px 0px 0px 50px;
+    width: 700px;
+}
+
+.inputanUser input[type="text"],
+.inputanUser input[type="number"] {
+    width: 300px;
+    padding: 10px;
+    margin: 6px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.inputanUser button{
+    width: 650px;
+    border-radius: 8px;
+}
+
+#login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.listOutput{
+    color: var(--secondary);
+    padding: 0px 0px 0px 50px;
+}
+
+.kotak-serloc{
+    background-color: var(--fourth);
+    color: var(--third);
+    padding: 20px;
+    margin: 8px 22px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1150px;
+}
+
+.kotak-serloc-left{
+    flex: 1;
+}
+
+.highlight{
+    font-weight: bold;
+}
+
+.emptySpace{
+    height: 150px;
+}
+
+footer{
+    background-color: var(--primary);
+    color: var(--fourth);
+    text-align: left;
+    padding: 15px 15px 45px 30px;
+}
