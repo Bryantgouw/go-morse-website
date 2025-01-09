@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
   
     try {
-        const response = await fetch("http://localhost:8000/api/v1/service-locations", {
+        const response = await fetch("https://gomorseapi.codebloop.my.id/api/v1/service-locations", {
             method: "GET",
             headers: {
                 "x-api-key": api_key, 
@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     
         try {
             const nearStore_resp = await fetch(
-                `http://localhost:8000/api/v1/nearest-store?user_latitude=${latitude}&user_longitude=${longitude}`,
+                `https://gomorseapi.codebloop.my.id/api/v1/nearest-store?user_latitude=${latitude}&user_longitude=${longitude}`,
                 {
                     method: "GET",
                     headers: {
@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             const tempatTerdekat = nearStore_dataNeeded.tempat_terdekat;
             const totalJarakKm = nearStore_dataNeeded.total_jarak_km;
             const ongkirFee_resp = await fetch(
-                `http://localhost:8000/api/v1/ongkir-fee-calculation?distance=${totalJarakKm}&vehicle_type=${vehicleType}`,
+                `https://gomorseapi.codebloop.my.id/api/v1/ongkir-fee-calculation?distance=${totalJarakKm}&vehicle_type=${vehicleType}`,
                 {
                     method: "GET",
                     headers: {
@@ -118,7 +118,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         });
     
         const biaya_tambahan = document.getElementById("biaya_tambahan").value;
-        const url = new URL("http://127.0.0.1:8000/api/v1/service-fee-calculation");
+        const url = new URL("https://gomorseapi.codebloop.my.id/api/v1/service-fee-calculation");
         const params = new URLSearchParams();
         params.append("biaya_tambahan", biaya_tambahan); 
         url.search = params.toString(); 

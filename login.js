@@ -4,7 +4,7 @@ document.getElementById("login").addEventListener("submit", async (event) => {
     const pass_word = event.target.Password.value;
 
     try {
-        const resp = await fetch("http://127.0.0.1:8000/api/v1/auth/login", {
+        const resp = await fetch("https://gomorseapi.codebloop.my.id/api/v1/auth/login", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
