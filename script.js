@@ -150,4 +150,34 @@ document.addEventListener("DOMContentLoaded", async () => {
             document.getElementById("result").innerHTML = `<p> Error = ${error.message}</p>`;
         }
     });
+
+    document.getElementById('catatanTambahanForm').addEventListener('submit', async function (event) {
+        event.preventDefault(); 
+        const catatanTambahanInput = this.elements['catatanTambahan'].value;
+        try {
+            const response = await fetch('https://textfilters.codebloop.my.id/api/predict', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhMjU3NDAzMGMxMzViYjAyOTg1ODIyZjhlNmQ2NzA4YiIsImlhdCI6MTczNjQ4NTM5NCwiZXhwIjoxNzM5MDc3Mzk0fQ.ywohZHmq0Qkgs5YBW7Fo1fk40r3iFEk7XkXvBnpzI8w',
+                },
+                body: JSON.stringify({ text: catatanTambahanInput }),
+            });
+    
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+
+            const dataNeeded = await response.json();
+            const outputPlace = document.getElementById('catatanTambahan');
+            const newResult = document.createElement('div');
+            newResult.innerHTML = `<strong>Prediction:</strong> ${JSON.stringify(dataNeeded)}`;
+            outputPlace.appendChild(newResult);
+        } catch (error) {
+            const outputPlace = document.getElementById('catatanTambahan');
+            const eror = document.createElement('div');
+            eror.innerHTML = `<strong>Error:</strong> ${error.message}`;
+            outputPlace.appendChild(eror);
+        }
+    });
 });
