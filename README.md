@@ -12,6 +12,16 @@ https://go-morse-website.vercel.app/
 
 ---
 
+## Proses Login
+Untuk melakukan login, dapat menggunakan username dan password sebagai berikut : 
+
+| Atribut             | Isi      |
+| ------------------- | -------- |
+| Username            | user |
+| Password            | gomorse123 |
+
+---
+
 ## Pembuat Aplikasi
 
 | Nama                | NIM      |
