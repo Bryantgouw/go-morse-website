@@ -170,15 +170,11 @@ document.addEventListener("DOMContentLoaded", async () => {
 
             const dataNeeded = await response.json();
             const outputPlace = document.getElementById('catatanTambahan');
-            const newResult = document.createElement('div');
-            newResult.innerHTML = `<strong>This Catatan Tambahan shows</strong> ${dataNeeded.class}`;
-            outputPlace.appendChild(newResult);
+            outputPlace.innerHTML = `<strong>This Catatan Tambahan shows</strong> ${dataNeeded.class}`;
             this.reset();
         } catch (error) {
             const outputPlace = document.getElementById('catatanTambahan');
-            const eror = document.createElement('div');
-            eror.innerHTML = `<strong>Error:</strong> ${error.message}`;
-            outputPlace.appendChild(eror);
+            outputPlace.innerHTML = `<strong>Error:</strong> ${error.message}`;
         }
     });
 });
