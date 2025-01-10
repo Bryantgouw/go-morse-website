@@ -30,4 +30,4 @@ Untuk melakukan login, dapat menggunakan username dan password sebagai berikut :
 
 ---
 
-© 2024 Bryant . All rights reserved.
+© 2025 Bryant . All rights reserved.
