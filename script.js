@@ -171,8 +171,9 @@ document.addEventListener("DOMContentLoaded", async () => {
             const dataNeeded = await response.json();
             const outputPlace = document.getElementById('catatanTambahan');
             const newResult = document.createElement('div');
-            newResult.innerHTML = `<strong>Prediction:</strong> ${JSON.stringify(dataNeeded)}`;
+            newResult.innerHTML = `<strong>This Catatan Tambahan shows</strong> ${dataNeeded.sentiment}`;
             outputPlace.appendChild(newResult);
+            this.reset();
         } catch (error) {
             const outputPlace = document.getElementById('catatanTambahan');
             const eror = document.createElement('div');
